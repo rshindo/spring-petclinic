@@ -1,0 +1,17 @@
+version: 2.1
+
+orbs:
+  maven: cimg/openjdk:11.0
+
+jobs:
+  build:
+    steps:
+      - checkout
+      - run:
+        name: test
+        command: ./mvnw test
+      - run:
+        name: package
+        command: ./mvnw  package -DskipTests
+
+  
