@@ -10,10 +10,10 @@ jobs:
     steps:
       - checkout
       - run:
-        name: test
-        command: ./mvnw test
+          name: test
+          command: ./mvnw test
       - run:
-        name: package
-        command: ./mvnw  package -DskipTests
+          name: package
+          command: ./mvnw  package -DskipTests
 
   
